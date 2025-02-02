@@ -9,7 +9,7 @@ const LoginPage = () => {
   const { authStatus } = useAuth();
 
   if (authStatus) {
-      router.replace("/profile");
+      router.replace("/dasboard");
       return <></>;
   }
 

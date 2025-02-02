@@ -1,9 +1,8 @@
 import authService from '@/appwrite/auth'
-import { Button } from '@mui/material'
 import React from 'react'
-import GitHubIcon from "@/public/github_git_icon_145985.png"
-import GoogleIcon from "@/public/google_icon-icons.com_62736.png"
 import Image from 'next/image'
+import { Button } from './button'
+import { Github } from 'lucide-react'
 
 const OAuth = () => {
     async function handleGithubClick() {
@@ -26,8 +25,8 @@ const OAuth = () => {
     }
     return (
         <div className='flex flex-wrap items-center justify-center gap-4 w-full'>
-            <Button variant='outlined' onClick={handleGoogleClick} className='text-black flex items-center justify-center gap-1'>{"Sign Up With Google"} <Image src={GoogleIcon} alt='Github Icon' width={30} height={30} /></Button>
-            <Button variant='outlined' onClick={handleGithubClick} className='text-black flex items-center justify-center gap-1'>{"Sign Up With GitHub"} <Image src={GitHubIcon} alt='Github Icon' width={30} height={30} /></Button>
+            <Button variant='outline' onClick={handleGoogleClick} className='text-black flex items-center justify-center gap-1'>{"Sign Up With Google"} <Github width={30} height={30} /></Button>
+            <Button variant='outline' onClick={handleGithubClick} className='text-black flex items-center justify-center gap-1'>{"Sign Up With GitHub"} <Github width={30} height={30} /></Button>
         </div>
     )
 }

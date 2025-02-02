@@ -8,16 +8,14 @@ const SignupPage = () => {
     const router = useRouter();
     const { authStatus, name } = useAuth();
 
-    // if (authStatus) {
-    //     alert("already logged in!")
-    //     router.replace(`/profile/${name}`);
-    //     return <></>;
-    // }
+    if (authStatus) {
+        alert("already logged in!")
+        router.replace(`/dashboard}`);
+        return <></>;
+    }
 
     return (
-        <section className="flex justify-center items-center  border-2 min-h-screen">
-            <SignupWrapper />
-        </section>
+        <SignupWrapper />
     )
 }
 

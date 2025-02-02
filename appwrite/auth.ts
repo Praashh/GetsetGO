@@ -5,7 +5,7 @@ import env from "@/env";
 
 export class AuthService {
     client = new Client();
-    account: any;
+    account: Account;
 
     constructor() {
         this.client.setEndpoint(env.appwriteUrl).setProject(env.appwriteProjectId);
@@ -44,7 +44,8 @@ export class AuthService {
 
     async logout() {
         try {
-            return await this.account.deleteSession();
+            const session = await this.account.getSession('current');
+            return await this.account.deleteSession(session.$id);
         } catch (error) {
             throw error;
         }
