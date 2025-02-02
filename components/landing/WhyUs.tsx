@@ -4,7 +4,7 @@ import WhyChooseUsCard from "../ui/WhyChooseUs";
 
 const WhyUS = () => {
   return (
-    <div className="relative flex justify-center items-center flex-col gap-5 md:gap-0 w-full mt-20">
+    <div className="relative flex justify-center items-center flex-col gap-5 md:gap-0 w-full mt-20 px-10">
       <div
         className="absolute inset-0 -z-10 -mx-28 rounded-t-[3rem] pointer-events-none overflow-hidden"
         aria-hidden="true"
