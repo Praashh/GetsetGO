@@ -50,7 +50,7 @@ export default function Navbar({ name, loader }: Prop) {
               </Button>
             ))}
             <ProfileHeader name={name} loader={loader} />
-            <ModeToggle />
+            {/* <ModeToggle /> */}
           </div>
           <div className="sm:hidden">
             <motion.button
