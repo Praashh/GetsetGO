@@ -19,7 +19,7 @@ export default function Navbar({ name, loader }: Prop) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="inset-x-0 fixed top-0 z-50 bg-white dark:bg-black shadow-sm">
+    <nav className="inset-x-0 fixed top-0 z-50 backdrop-blur-2xl dark:bg-black shadow-sm bg-transparent">
       <div className="sm:max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div className="flex justify-between px-28 h-20 items-center">
           <div className="flex items-center">
@@ -29,6 +29,7 @@ export default function Navbar({ name, loader }: Prop) {
                 alt="Vora AI"
                 height={40}
                 width={120}
+                className="scale-110"
                 priority
               />
             </Link>

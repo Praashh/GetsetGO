@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./theme";
 import { siteConfig } from "@/config/appconfig";
+import { Footer } from "@/components/landing/Footer";
 const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = siteConfig;
 
@@ -21,6 +22,7 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             {children}
+            <Footer/>
           </ThemeProvider>
       </body>
     </html>

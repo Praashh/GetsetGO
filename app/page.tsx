@@ -4,6 +4,9 @@ import authService from "@/appwrite/auth";
 import { useEffect, useState } from "react";
 import Navbar from "@/components/landing/Navbar";
 import Hero from "@/components/ui/hero";
+import WhyUS from "@/components/landing/WhyUs";
+import FAQS from "@/components/ui/faqs";
+import FeatureShowcase from "@/components/ui/features";
 
 export default function Home() {
   const [authStatus, setAuthStatus] = useState<boolean>(false);
@@ -32,11 +35,15 @@ export default function Home() {
     <AuthProvider
       value={{ authStatus, setAuthStatus, email, name, setEmail, setName }}
     >
-      <div className="min-h-screen bg-gradient-to-b from-white to-[#fce7f3] dark:from-black dark:to-[#1a1a1a]">
+      <div className="min-h-screen bg-white">
         <Navbar name={name} loader={loader} />
-        <main className="flex justify-center items-center min-h-[calc(100vh-5rem)]">
-          <Hero />
-        </main>
+        <Hero />
+        <div
+        className="px-20 overflow-x-hidden">
+          <FeatureShowcase/>
+          <WhyUS/>
+          <FAQS/>
+        </div>
       </div>
     </AuthProvider>
   );

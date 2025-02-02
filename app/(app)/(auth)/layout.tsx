@@ -2,6 +2,7 @@
 import { AuthProvider } from "@/context/authContext"
 import authService from "@/appwrite/auth"
 import { useEffect, useState } from "react"
+import CustomLoader from "@/components/ui/loader"
 
 
 const PageLayout = ({
@@ -31,7 +32,7 @@ const PageLayout = ({
     }, []);
     return <AuthProvider value={{ authStatus, setAuthStatus, name, email, setEmail, setName }}>
         {
-            loader ? (<div className="h-screen w-screen flex justify-center items-center"><div className="loader h-50 w-50"></div></div>) : (<>{children}</>)
+            loader ? (<CustomLoader/>) : (<>{children}</>)
         }
     </AuthProvider>
 }

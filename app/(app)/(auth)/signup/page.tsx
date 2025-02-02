@@ -10,7 +10,7 @@ const SignupPage = () => {
 
     if (authStatus) {
         alert("already logged in!")
-        router.replace(`/dashboard}`);
+        router.replace(`/dashboard`);
         return <></>;
     }
 
